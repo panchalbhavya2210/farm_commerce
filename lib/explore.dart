@@ -14,16 +14,19 @@ class ExplorePage extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-                child: CategoryBar(
-              shouldDisplay: false,
-            )),
-            ProductGrid(
-              shouldButtonDisplay: true,
-            ),
-          ],
+        child: Container(
+          margin: EdgeInsets.only(top: 10),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                  child: CategoryBar(
+                shouldDisplay: false,
+              )),
+              ProductGrid(
+                shouldButtonDisplay: true,
+              ),
+            ],
+          ),
         ),
       ),
     );
